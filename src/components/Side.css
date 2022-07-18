@@ -1,0 +1,33 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --yellow: #FFCB00;
+}
+
+.dark_button,
+.dark_bg {
+  background-color: var(--black);
+}
+
+.dark_btn {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.dark_master {
+  color: var(--white);
+}
+
+
+.light_bg {
+  background-color: var(--yellow);
+}
+
+.light_btn {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
+.light_title {
+  color: var(--black);
+}
