@@ -1,7 +1,6 @@
-import { React, useState } from "react";
+import { React } from "react";
 import * as S from "../assets/style/Global";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import Master from "./Master";
+import { useNavigate } from "react-router-dom";
 import { forceSides, FORCE_SIDE } from "../API";
 
 export const Home = () => {
@@ -14,22 +13,18 @@ export const Home = () => {
   };
 
   return (
-    <Routes>
-      <S.Container>
-        <S.firstTitle>
-          Welcome to <strong>iClinic</strong>
-        </S.firstTitle>
-        <S.secondTitle>Front End Challenge</S.secondTitle>
-        <S.btn
-          id="btn"
-          onClick={redirectAsync}
-        >
-          <span id="txtBtn">Start</span>
-        </S.btn>
-      </S.Container>
-
-      <Route path="master" element={<Master />} />
-    </Routes>
+    <S.Container>
+      <S.firstTitle>
+        Welcome to <strong>iClinic</strong>
+      </S.firstTitle>
+      <S.secondTitle>Front End Challenge</S.secondTitle>
+      <S.btn
+        id="btn"
+        onClick={redirectAsync}
+      >
+        <span id="txtBtn">Start</span>
+      </S.btn>
+    </S.Container>
   );
 };
 

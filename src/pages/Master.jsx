@@ -4,7 +4,7 @@ const Master = () => {
   return (
     <div>
       <h1>{FORCE_SIDE[0]}</h1>
-      <button disabled={loading} onClick={forceSides}>
+      <button disabled onClick={forceSides}>
         Clique aqui
       </button>
     
