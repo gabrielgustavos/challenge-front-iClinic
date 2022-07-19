@@ -1,29 +1,32 @@
-import { React } from "react";
-import * as style from "../assets/style/Global";
+import { React, useState } from "react";
+import * as S from "../assets/style/Global";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Master from "./Master";
+import { forceSides, FORCE_SIDE } from "../API";
 
 export const Home = () => {
   const navigate = useNavigate();
-
   const redirectAsync = () => {
+    forceSides();
+    if(FORCE_SIDE[0]){
     navigate("master");
+    }
   };
 
   return (
     <Routes>
-      <style.Container>
-        <style.firstTitle>
+      <S.Container>
+        <S.firstTitle>
           Welcome to <strong>iClinic</strong>
-        </style.firstTitle>
-        <style.secondTitle>Front End Challenge</style.secondTitle>
-        <style.btn
+        </S.firstTitle>
+        <S.secondTitle>Front End Challenge</S.secondTitle>
+        <S.btn
           id="btn"
           onClick={redirectAsync}
         >
           <span id="txtBtn">Start</span>
-        </style.btn>
-      </style.Container>
+        </S.btn>
+      </S.Container>
 
       <Route path="master" element={<Master />} />
     </Routes>

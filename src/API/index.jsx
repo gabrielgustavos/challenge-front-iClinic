@@ -1,15 +1,17 @@
-export const SITH_NAME = "Darth Vader";
-export const JEDI_NAME = "Luke Skywalker";
+export const FORCE_SIDE = [];
 
-export const forceSides = async () => {
+export const forceSides = async (setLoading) => {
+
   try {
-    const response = await Promise.race([
+    setLoading = true;
+    const res = await Promise.race([
       fetch("https://swapi.dev/api/people/1"),
       fetch("https://swapi.dev/api/people/4"),
     ]);
-
-    const req = await response.json();
-    console.log(req.name);
+    const data = await res.json();
+    FORCE_SIDE.unshift(data.name);
+    setLoading = false
+    console.log(FORCE_SIDE);
   } catch (error) {
     console.log(`This API is not working, there is the reason: ${error}`);
   }
