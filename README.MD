@@ -1,4 +1,4 @@
-# Front End Challenge iClinic (EM PRODUÇÃO)
+# Front End Challenge iClinic (FINALIZADO)
 
 ## Sobre o desafio
 
@@ -22,5 +22,5 @@ O desafio tem como objetivo consumir uma API do Star Wars (SWAPI)
 - Após, execute:
 
 ```bash
-  npm start ou yarn start
+  npm run dev ou yarn dev
 ```

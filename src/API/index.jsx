@@ -1,4 +1,4 @@
-export const MASTER_NAME = []
+export const SELECTED_MASTER_NAME = []
 export const forceSides = async (setLoading, navigate) => {
   try {
     setLoading(true);
@@ -7,18 +7,17 @@ export const forceSides = async (setLoading, navigate) => {
       fetch("https://swapi.dev/api/people/4"),
     ]);
     const data = await res.json();
-    MASTER_NAME.unshift(data.name)
-    console.log(MASTER_NAME[0])
+    SELECTED_MASTER_NAME.unshift(data.name)
     setLoading(false);
-
-    if(MASTER_NAME[0] === "Luke Skywalker"){
+    if(SELECTED_MASTER_NAME[0] === "Luke Skywalker"){
       navigate("master")
     } else {
       navigate("master")
     }
-
   } catch (error) {
     setLoading(false);
     console.log(`This API is not working, there is the reason: ${error}`);
   }
 };
+
+export default forceSides

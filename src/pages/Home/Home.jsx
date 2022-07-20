@@ -1,11 +1,13 @@
 import { useState, React } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { forceSides } from "../API";
-import Master from "./Master";
+
+import { forceSides } from "../../API";
+import Master from "../Master/Master";
+
 import "./home.sass";
 
 export const Home = () => {
-  const navigate = useNavigate("master");
+  const navigate = useNavigate("");
   const [loading, setLoading] = useState(false);
 
   return (

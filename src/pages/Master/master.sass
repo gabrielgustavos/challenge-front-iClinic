@@ -1,0 +1,84 @@
+@use '/src/assets/style/variables'
+@use '/src/assets/style/mixins'
+
+.dark_bg
+  background-color: variables.$dark
+
+.light_bg
+  background-color: variables.$yellow
+
+.dark_bg,
+.light_bg
+  @include mixins.center
+  height: 100vh
+
+.back_icon
+  width: 100vw
+  display: flex
+  align-self: flex-start
+  color: variables.$white
+  margin-left: 45px
+
+.icon_arrow
+  color: variables.$white
+  width: 31px
+  height: 25px
+  margin-bottom: -5px
+  margin-right: 10px
+
+.white_back
+  color: variables.$white
+
+.black_back
+  color: variables.$dark
+
+.btn_refresh
+  width: 347px
+  height: 56px
+  border: none
+  border-radius: 10px
+  font-weight: variables.$bold
+  font-size: 1rem
+  line-height: 1.1rem
+  margin: 0 auto 50px auto
+
+.master_img
+  border-radius: 50%
+  margin-top: 74px
+  margin-top: 10px
+
+.master_title
+  line-height: 18px
+  text-align: center
+  margin-top: 50px
+  font-weight: variables.$semi_bold
+
+.dark_title
+  color: variables.$white
+  font-weight: variables.$semi_bold
+
+.light_title
+  color: variables.$dark
+
+.light_title,
+.dark_title
+  font-weight: variables.$semi_bold
+  margin-top: 40px
+
+.light_btn
+  background-color: variables.$dark
+  color: variables.$yellow
+
+.dark_btn
+  background-color: variables.$white
+  color: variables.$dark
+
+@media (max-width: 800px)
+  .btn_refresh,
+  .master_img
+    order: -2
+
+  .back_icon
+    height: 100vh
+    margin-top: -370px
+    margin-left: 10px
