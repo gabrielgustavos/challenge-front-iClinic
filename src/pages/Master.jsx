@@ -1,14 +1,17 @@
-import { FORCE_SIDE, forceSides } from "../API";
+import { MASTER_NAME } from "../API";
+
+import Luke from "../assets/images/luke-skywalker.png";
+import Darth from "../assets/images/darth-vader.png";
+
+let light = "Luke Skywalker";
+let dark = "Darth Vader";
 
 const Master = () => {
   return (
-    <div>
-      <h1>{FORCE_SIDE[0]}</h1>
-      <button disabled={loading} onClick={forceSides}>
-        Clique aqui
-      </button>
-    
-    </div>
+    <>
+      <h1>{MASTER_NAME[0]}</h1>
+      <img src={MASTER_NAME[0] === light ? Luke : Darth} alt={MASTER_NAME[0]} />
+    </>
   );
 };
 

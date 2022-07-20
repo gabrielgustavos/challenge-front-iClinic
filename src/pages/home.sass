@@ -1,0 +1,43 @@
+@use '../assets/style/variables'
+@use '../assets/style/mixins'
+
+.container
+  margin-top: 210px
+
+.container,
+.header_container
+  @include mixins.center
+
+.principal_title_home,
+.sub_title_home
+  color: variables.$blue
+  font-weight: 400
+
+.principal_title_home
+  font-size: variables.$principal_title
+
+.sub_title_home
+  line-height: 1.1rem
+  margin-top: 7px
+
+.sub_title_home,
+.home_btn
+  text-transform: uppercase
+  font-size: variables.$sub_title
+  letter-spacing: variables.$spacing
+
+.home_btn
+  @include mixins.btn
+  width: 145px
+  height: 46px
+  margin-top: 70px
+  color: variables.$white
+  background-color: variables.$blue
+  color: variables.$white
+  font-weight: variables.$bold
+  line-height: 22px
+  transition: 1s
+  &:hover
+    transform: scale(1.1)
+  &:active
+    transform: translateY(4px) scale(0.80)
