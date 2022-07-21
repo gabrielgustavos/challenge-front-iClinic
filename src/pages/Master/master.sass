@@ -9,28 +9,35 @@
 
 .dark_bg,
 .light_bg
-  @include mixins.center
   height: 100vh
 
-.back_icon
-  width: 100vw
+.back_section
   display: flex
   align-self: flex-start
   color: variables.$white
-  margin-left: 45px
 
-.icon_arrow
+.arrow_icon
   color: variables.$white
-  width: 31px
-  height: 25px
-  margin-bottom: -5px
-  margin-right: 10px
+  width: 50px
+  height: 30px
 
 .white_back
   color: variables.$white
+  letter-spacing: 5px
 
 .black_back
   color: variables.$dark
+  letter-spacing: 5px
+
+.black_back,
+.white_back
+  &:hover
+    transition: 1.1s
+    letter-spacing: 10px
+
+.btn_container
+  @include mixins.center
+  margin: 50px 0
 
 .btn_refresh
   width: 347px
@@ -40,45 +47,52 @@
   font-weight: variables.$bold
   font-size: 1rem
   line-height: 1.1rem
-  margin: 0 auto 50px auto
 
-.master_img
-  border-radius: 50%
-  margin-top: 74px
-  margin-top: 10px
-
-.master_title
-  line-height: 18px
-  text-align: center
-  margin-top: 50px
-  font-weight: variables.$semi_bold
-
-.dark_title
-  color: variables.$white
-  font-weight: variables.$semi_bold
-
-.light_title
-  color: variables.$dark
-
-.light_title,
-.dark_title
-  font-weight: variables.$semi_bold
-  margin-top: 40px
-
-.light_btn
+#light_text_btn
   background-color: variables.$dark
   color: variables.$yellow
 
-.dark_btn
+#dark_text_btn
   background-color: variables.$white
   color: variables.$dark
 
+.master_img
+  @include mixins.center
+
+img
+  width: 302px
+  height: 302px
+  border-radius: 50%
+
+.footer_container
+  @include mixins.center
+  margin-top: 50px
+
+.dark_master
+  color: variables.$white
+  font-weight: variables.$semi_bold
+
+.light_master
+  color: variables.$dark
+
+.light_master,
+.dark_master
+  font-weight: variables.$semi_bold
+  line-height: 1.5rem
+  font-size: 2.1rem
+
 @media (max-width: 800px)
-  .btn_refresh,
-  .master_img
+  .reverse_container
+    display: flex
+    flex-direction: column-reverse
+
+  .btn_container
     order: -2
 
-  .back_icon
-    height: 100vh
-    margin-top: -370px
-    margin-left: 10px
+  .master_img
+    order: 1
+
+  .btn_container,
+  .footer_container,
+  .master_img
+    margin-top: 100px

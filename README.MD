@@ -24,3 +24,7 @@ O desafio tem como objetivo consumir uma API do Star Wars (SWAPI)
 ```bash
   npm run dev ou yarn dev
 ```
+
+###
+
+- Figma: https://www.figma.com/file/lvmezOyyLVXgUQxXGgcGT6/iClinic-Frontend-Challenge?node-id=0%3A1

@@ -16,43 +16,47 @@ let masterName = SELECTED_MASTER_NAME;
 const Master = () => {
   const [loading, setLoading] = useState(false);
   return (
-    <>
-      <main className={masterName[0] === sith ? "dark_bg" : "light_bg"}>
-        <nav className="back_icon">
-          <Link to="/">
-            <AiOutlineArrowLeft className="icon_arrow" />
-            <span
-              className={masterName[0] === sith ? "white_back" : "black_back"}
-            >
-              back
-            </span>
-          </Link>
-        </nav>
-        <nav>
+    <main className={masterName[0] === sith ? "dark_bg" : "light_bg"}>
+      <nav className="back_section">
+        <Link to="/">
+          <AiOutlineArrowLeft className="arrow_icon" />
+          <span
+            className={masterName[0] === sith ? "white_back" : "black_back"}
+          >
+            back
+          </span>
+        </Link>
+      </nav>
+      <div className="reverse_colum">
+        <nav className="btn_container">
           <button
             onClick={() => forceSides(setLoading)}
             disabled={loading}
             type="button"
             className="btn_refresh"
             loading="lazy"
-            id={masterName[0] === sith ? "dark_btn" : "light_btn"}
+            id={masterName[0] === sith ? "dark_text_btn" : "light_text_btn"}
           >
-            <span>choose your path again, Padawan</span>
+            <span> choose your path again, Padawan</span>
           </button>
         </nav>
-        <img
-          className="master_img"
-          src={masterName[0] === jedi ? Luke : Darth}
-          alt={masterName[0]}
-        />
-        <footer>
-          <h1 className={masterName[0] === jedi ? "light_title" : "dark_title"}>
+
+        <div className="master_img">
+          <img
+            src={masterName[0] === jedi ? Luke : Darth}
+            alt={masterName[0]}
+          />
+        </div>
+
+        <footer className="footer_container">
+          <h1
+            className={masterName[0] === jedi ? "light_master" : "dark_master"}
+          >
             Your master is <strong>{masterName[0]}</strong>
           </h1>
         </footer>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
-
 export default Master;
