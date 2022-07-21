@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./pages/Home/Home";
-import Master from "./pages/Master/Master";
+import Home from "./src/pages/Home/Home";
+import Master from "./src/pages/Master/Master";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import "./assets/style/main.sass";
+import "./src/assets/style/main.sass"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
